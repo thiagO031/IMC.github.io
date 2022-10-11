@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './style/Main.sass'
 
 const Main = () => {
 
@@ -20,21 +21,21 @@ const Main = () => {
 
     return (
         <main className='main'>
-            <header className="header">
+            <div className="main-container">
                 <h2>IMC 2022</h2>
 
                 <form>
                     <label>
-                        <input id='nome' type="text" value={nome} onChange={imcNome} placeholder='Nome'/>
+                        <input type="text" value={nome} onChange={imcNome} placeholder='Nome'/>
                         <input type="number" value={altura} onChange={imcAltura} placeholder='Altura' />
                         <input type="number" value={peso} onChange={imcPeso} placeholder='Peso' />
                     </label>
                 </form>
 
                 <div className="res">
-                    <h1>{nome}, o seu IMC é {peso / (altura * altura)}</h1>
+                    <h1>{nome}, o seu <br /> IMC é: {peso / (altura * altura)}</h1>
                 </div>
-            </header>
+            </div>
         </main>
     )
 }

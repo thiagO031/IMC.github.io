@@ -33,7 +33,7 @@ const Main = () => {
                 </form>
 
                 <div className="res">
-                    <h1>{nome}, o seu <br /> IMC é: {peso / (altura * altura)}</h1>
+                    <h1>{nome}, o seu IMC é: <span>{(peso / (altura * altura)).toFixed(1)}</span></h1>
                 </div>
             </div>
         </main>
